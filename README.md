@@ -2,6 +2,10 @@
 
 Else Ponto é uma extensão do Chrome que facilita o registro e o acompanhamento das batidas de ponto eletrônico. A extensão registra automaticamente as batidas de ponto, calcula as horas trabalhadas e informa quanto tempo falta para completar 8 horas de trabalho.
 
+## Demonstração
+
+![screenshot](./Scheenshot-1.png)
+
 ## Funcionalidades
 
 - **Registro de Ponto**: Captura as batidas de ponto ao clicar em um botão específico na página.

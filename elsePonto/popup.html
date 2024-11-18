@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>elsePonto</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header { display: flex; align-items: center; }
+        header img { width: 32px; height: 32px; margin-right: 10px; }
+        button { margin-top: 10px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .resultados { margin-top: 20px; }
+        h1 {
+    font-size: 20px;
+    color: #007bff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="icon.png" alt="Ícone">
+        <h1>elsePonto</h1>
+    </header>
+    <button id="limparPontos">Limpar Registros</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Hora</th>
+            </tr>
+        </thead>
+        <tbody id="listaPontos"></tbody>
+    </table>
+    <div class="resultados">
+        <h2>Resultados</h2>
+        <p id="horasTrabalhadas"></p>
+        <p id="horasRestantes"></p>
+        <p id="proximoHorario"></p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

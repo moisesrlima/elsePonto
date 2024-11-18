@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "elsePonto",
+  "version": "1.0",
+  "description": "Registra o horário do ponto eletrônico.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://awstou.ifractal.com.br/poupex/phonto.php"],
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -20,6 +20,8 @@
         .menu-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
         .menu-content a:hover { background-color: #f1f1f1; }
         .menu:hover .menu-content { display: block; }
+        .menu-content .admin { display: flex; align-items: center; padding: 12px 16px; }
+        .menu-content .admin input { margin-left: 10px; }
     </style>
 </head>
 <body>
@@ -31,6 +33,12 @@
             <div class="menu-content">
                 <a href="https://github.com/moisesrlima/elsePonto" target="_blank">Colabore</a>
                 <a href="https://awstou.ifractal.com.br/poupex/phonto.php" target="_blank">IfPonto</a>
+                <a href="https://stou.ifractal.com.br/poupex/login.php" target="_blank">Espelho do ponto</a>
+                <div class="admin">
+                    Administrar jornada:
+                    <label><input type="radio" name="jornada" value="8" checked> 8h</label>
+                    <label><input type="radio" name="jornada" value="6"> 6h</label>
+                </div>
             </div>
         </div>
     </header>

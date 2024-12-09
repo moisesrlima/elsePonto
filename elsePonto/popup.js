@@ -2,6 +2,7 @@ document.getElementById('limparPontos').addEventListener('click', () => {
   chrome.storage.local.set({ pontos: [] }, () => {
       atualizarListaPontos([]);
       atualizarResultados([]);
+      atualizarNotificacoes([]);
       alert('Todos os registros foram limpos.');
   });
 });
@@ -57,10 +58,21 @@ function atualizarResultados(pontos) {
   document.getElementById('proximoHorario').textContent = mensagemProximoHorario;
 }
 
+function atualizarNotificacoes(notificacoes) {
+  const lista = document.getElementById('listaNotificacoes');
+  lista.innerHTML = '';
+  notificacoes.forEach((notificacao) => {
+      const li = document.createElement('li');
+      li.textContent = notificacao;
+      lista.appendChild(li);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  chrome.storage.local.get({ pontos: [] }, (result) => {
+  chrome.storage.local.get({ pontos: [], notificacoes: [] }, (result) => {
       atualizarListaPontos(result.pontos);
       atualizarResultados(result.pontos);
+      atualizarNotificacoes(result.notificacoes);
   });
 
   document.querySelectorAll('input[name="jornada"]').forEach((input) => {
